@@ -3,4 +3,3 @@
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.gif filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
-*(>=50KB) filter=lfs diff=lfs merge=lfs -text
