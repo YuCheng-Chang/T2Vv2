@@ -3,3 +3,5 @@
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.gif filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
+annotator/ckpts/*.pth filter=lfs diff=lfs merge=lfs -text
+annotator/ckpts/*.pt filter=lfs diff=lfs merge=lfs -text
