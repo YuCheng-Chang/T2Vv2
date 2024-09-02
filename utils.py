@@ -103,6 +103,17 @@ def create_video(frames, fps, rescale=False, path=None, watermark=None):
         x = torchvision.utils.make_grid(torch.Tensor(x), nrow=4)
         if rescale:
             x = (x + 1.0) / 2.0  # -1,1 -> 0,1
+        # 添加調試信息
+        print(f"Frame {i}:")
+        print(f"  Min value: {x.min().item()}")
+        print(f"  Max value: {x.max().item()}")
+        print(f"  Mean value: {x.mean().item()}")
+        print(f"  Contains NaN: {torch.isnan(x).any().item()}")
+        print(f"  Contains Inf: {torch.isinf(x).any().item()}")
+        
+        # 檢查是否有超出範圍的值
+        if x.min() < 0 or x.max() > 1:
+            print(f"  Warning: Values out of range [0, 1] detected in frame {i}")
         x = (x * 255).numpy().astype(np.uint8)
 
         if watermark is not None:
