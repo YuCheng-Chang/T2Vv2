@@ -13,11 +13,6 @@ import gradio_utils
 import os
 on_huggingspace = os.environ.get("SPACE_AUTHOR_NAME") == "PAIR"
 
-<<<<<<< HEAD
-
-=======
-#紀鵬到此一遊:)
->>>>>>> 0d598340d0636e7a3ff895ad74b8444225852e19
 class ModelType(Enum):
     Pix2Pix_Video = 1,
     Text2Video = 2,
@@ -67,7 +62,6 @@ class Model:
 
     def inference_chunk(self, frame_ids, **kwargs):
         if not hasattr(self, "pipe") or self.pipe is None:
-<<<<<<< HEAD
             return
 
         prompt = np.array(kwargs.pop('prompt'))
@@ -88,77 +82,6 @@ class Model:
                          **kwargs)
 
     def inference(self, split_to_chunks=False, chunk_size=8, **kwargs):
-=======
-            print("Error: pipe is not initialized")
-            return
-
-        print(f"Processing chunk with frame_ids: {frame_ids}")
-
-        def check_tensor(tensor, name):
-            if tensor is None:
-                print(f"{name} is None")
-                return
-            if torch.isnan(tensor).any():
-                print(f"NaN found in {name}")
-            if torch.isinf(tensor).any():
-                print(f"Inf found in {name}")
-            print(f"{name} shape: {tensor.shape}")
-            print(f"{name} min: {tensor.min().item()}, max: {tensor.max().item()}")
-
-        prompt = kwargs.pop('prompt', None)
-        negative_prompt = kwargs.pop('negative_prompt', None)
-        
-        # print(f"Prompt: {prompt}")
-        # print(f"Negative prompt: {negative_prompt}")
-
-        latents = kwargs.pop('latents', None)
-        if latents is not None:
-            latents = latents[frame_ids]
-            check_tensor(latents, "latents")
-        else:
-            print("latent is None")
-            
-        if 'image' in kwargs:
-            kwargs['image'] = kwargs['image'][frame_ids]
-            check_tensor(kwargs['image'], "image")
-
-        if 'video_length' in kwargs:
-            kwargs['video_length'] = len(frame_ids)
-
-        if self.model_type == ModelType.Text2Video:
-            kwargs["frame_ids"] = frame_ids
-
-        try:
-            # 檢查輸入
-            for key, value in kwargs.items():
-                if isinstance(value, torch.Tensor):
-                    check_tensor(value, f"Input {key}")
-            # self.pipe = self.pipe.float()
-            result = self.pipe(
-                prompt=prompt[frame_ids].tolist() if isinstance(prompt, np.ndarray) else prompt,
-                negative_prompt=negative_prompt[frame_ids].tolist() if isinstance(negative_prompt, np.ndarray) else negative_prompt,
-                latents=latents,
-                generator=self.generator,
-                **kwargs
-            )
-             # 檢查中間結果
-            for key, value in result.items():
-                if isinstance(value, torch.Tensor):
-                    check_tensor(value, f"Output {key}")
-            check_tensor(result.images, "result.images")
-            return result
-        except Exception as e:
-            print(f"Error during inference: {str(e)}")
-            import traceback
-            traceback.print_exc()
-            return None
-
-    def inference(self, split_to_chunks=False, chunk_size=8, **kwargs):
-        def print_cuda_memory():
-            if torch.cuda.is_available():
-                print(f"CUDA memory allocated: {torch.cuda.memory_allocated() / 1e9:.2f} GB")
-                print(f"CUDA memory reserved: {torch.cuda.memory_reserved() / 1e9:.2f} GB")
->>>>>>> 0d598340d0636e7a3ff895ad74b8444225852e19
         if not hasattr(self, "pipe") or self.pipe is None:
             return
 
@@ -188,7 +111,6 @@ class Model:
             chunk_ids = np.arange(0, f, chunk_size - 1)
             result = []
             for i in range(len(chunk_ids)):
-<<<<<<< HEAD
                 ch_start = chunk_ids[i]
                 ch_end = f if i == len(chunk_ids) - 1 else chunk_ids[i + 1]
                 frame_ids = [0] + list(range(ch_start, ch_end))
@@ -198,26 +120,6 @@ class Model:
                                                    prompt=prompt,
                                                    negative_prompt=negative_prompt,
                                                    **kwargs).images[1:])
-=======
-                print_cuda_memory()
-                ch_start = chunk_ids[i]
-                ch_end = f if i == len(chunk_ids) - 1 else chunk_ids[i + 1]
-                frame_ids = [0] + list(range(ch_start, ch_end))
-                print(f'Frame ids {frame_ids}')
-                self.generator.manual_seed(seed)
-                print(f'Processing chunk {i + 1} / {len(chunk_ids)}')
-                chunk_result = self.inference_chunk(frame_ids=frame_ids,
-                                                    prompt=prompt,
-                                                    negative_prompt=negative_prompt,
-                                                    **kwargs).images[1:]
-                
-                # # 修改這些檢查以使用 PyTorch 函數
-                # print(f"Chunk {i+1} shape: {chunk_result.shape}")
-                # print(f"Chunk {i+1} min: {torch.min(chunk_result).item()}, max: {torch.max(chunk_result).item()}")
-                # print(f"Chunk {i+1} has NaN: {torch.isnan(chunk_result).any().item()}")
-                
-                result.append(chunk_result)
->>>>>>> 0d598340d0636e7a3ff895ad74b8444225852e19
                 frames_counter += len(chunk_ids)-1
                 if on_huggingspace and frames_counter >= 80:
                     break
@@ -548,23 +450,8 @@ class Model:
                 model_name, subfolder="unet")
             self.set_model(ModelType.Text2Video,
                            model_id=model_name, unet=unet)
-<<<<<<< HEAD
             self.pipe.scheduler = DDIMScheduler.from_config(
                 self.pipe.scheduler.config)
-=======
-            def check_model_weights(model):
-                for name, param in model.named_parameters():
-                    if torch.isnan(param).any():
-                        print(f"NaN found in {name}")
-                    if torch.isinf(param).any():
-                        print(f"Inf found in {name}")
-            self.pipe.scheduler = DDIMScheduler.from_config(
-                self.pipe.scheduler.config)
-            print("check model weights...")
-            check_model_weights(self.pipe.unet)
-            check_model_weights(self.pipe.text_encoder)
-            check_model_weights(self.pipe.vae)
->>>>>>> 0d598340d0636e7a3ff895ad74b8444225852e19
             if use_cf_attn:
                 self.pipe.unet.set_attn_processor(
                     processor=self.text2video_attn_proc)

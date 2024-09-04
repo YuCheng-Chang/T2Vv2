@@ -1,0 +1,85 @@
+Currently Loaded Modulefiles:
+ 1) slurm/slurm/23.02.4   2) nvidia-hpc/2024_241   3) nvhpc/24.1  
+/home/yccra/Text2Video-Zero/annotator/openpose/body.py:5: DeprecationWarning: Please use `gaussian_filter` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter
+/home/yccra/Text2Video-Zero/annotator/openpose/hand.py:6: DeprecationWarning: Please use `gaussian_filter` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter
+/home/yccra/.conda/envs/T2VZeroNew/lib/python3.8/site-packages/skimage/util/dtype.py:27: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+/home/yccra/Text2Video-Zero/annotator/openpose/body.py:20: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_dict = util.transfer(self.model, torch.load(model_path))
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/yccra/Text2Video-Zero/inference_text_to_video.py:5 in <module>         │
+│                                                                              │
+│    2 print(torch.cuda.is_available())  # 應該返回 True                       │
+│    3 print(torch.version.cuda)          # 應該顯示 12.4                      │
+│    4 print(torch.cuda.get_device_name(torch.cuda.current_device())) # GPU名  │
+│ ❱  5 from model import Model                                                 │
+│    6                                                                         │
+│    7 model = Model(device = "cuda", dtype = torch.float16)                   │
+│    8 from hf_utils import get_model_list                                     │
+│                                                                              │
+│ /home/yccra/Text2Video-Zero/model.py:11 in <module>                          │
+│                                                                              │
+│     8 from diffusers.schedulers import EulerAncestralDiscreteScheduler, DDIM │
+│     9 from text_to_video_pipeline import TextToVideoPipeline                 │
+│    10                                                                        │
+│ ❱  11 import utils                                                           │
+│    12 import gradio_utils                                                    │
+│    13 import os                                                              │
+│    14 on_huggingspace = os.environ.get("SPACE_AUTHOR_NAME") == "PAIR"        │
+│                                                                              │
+│ /home/yccra/Text2Video-Zero/utils.py:19 in <module>                          │
+│                                                                              │
+│    16 import decord                                                          │
+│    17                                                                        │
+│    18 apply_canny = CannyDetector()                                          │
+│ ❱  19 apply_openpose = OpenposeDetector()                                    │
+│    20 apply_midas = MidasDetector()                                          │
+│    21                                                                        │
+│    22                                                                        │
+│                                                                              │
+│ /home/yccra/Text2Video-Zero/annotator/openpose/__init__.py:26 in __init__    │
+│                                                                              │
+│   23 │   │   │   load_file_from_url(body_model_path, model_dir=annotator_ckp │
+│   24 │   │   │   load_file_from_url(hand_model_path, model_dir=annotator_ckp │
+│   25 │   │                                                                   │
+│ ❱ 26 │   │   self.body_estimation = Body(body_modelpath)                     │
+│   27 │   │   self.hand_estimation = Hand(hand_modelpath)                     │
+│   28 │                                                                       │
+│   29 │   def __call__(self, oriImg, hand=False):                             │
+│                                                                              │
+│ /home/yccra/Text2Video-Zero/annotator/openpose/body.py:20 in __init__        │
+│                                                                              │
+│    17 │   │   if torch.cuda.is_available():                                  │
+│    18 │   │   │   self.model = self.model.cuda()                             │
+│    19 │   │   │   print('cuda')                                              │
+│ ❱  20 │   │   model_dict = util.transfer(self.model, torch.load(model_path)) │
+│    21 │   │   self.model.load_state_dict(model_dict)                         │
+│    22 │   │   self.model.eval()                                              │
+│    23                                                                        │
+│                                                                              │
+│ /home/yccra/.conda/envs/T2VZeroNew/lib/python3.8/site-packages/torch/seriali │
+│ zation.py:1114 in load                                                       │
+│                                                                              │
+│   1111 │   │   │   │   return _legacy_load(opened_file, map_location, _weigh │
+│   1112 │   │   │   except RuntimeError as e:                                 │
+│   1113 │   │   │   │   raise pickle.UnpicklingError(_get_wo_message(str(e))) │
+│ ❱ 1114 │   │   return _legacy_load(                                          │
+│   1115 │   │   │   opened_file, map_location, pickle_module, **pickle_load_a │
+│   1116 │   │   )                                                             │
+│   1117                                                                       │
+│                                                                              │
+│ /home/yccra/.conda/envs/T2VZeroNew/lib/python3.8/site-packages/torch/seriali │
+│ zation.py:1338 in _legacy_load                                               │
+│                                                                              │
+│   1335 │   │   │   f'Received object of type "{type(f)}". Please update to P │
+│   1336 │   │   │   "functionality.")                                         │
+│   1337 │                                                                     │
+│ ❱ 1338 │   magic_number = pickle_module.load(f, **pickle_load_args)          │
+│   1339 │   if magic_number != MAGIC_NUMBER:                                  │
+│   1340 │   │   raise RuntimeError("Invalid magic number; corrupt file?")     │
+│   1341 │   protocol_version = pickle_module.load(f, **pickle_load_args)      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+UnpicklingError: invalid load key, 'v'.
+srun: error: DGX-CN01: task 0: Exited with exit code 1
