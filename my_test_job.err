@@ -6,8 +6,6 @@ Currently Loaded Modulefiles:
   from scipy.ndimage.filters import gaussian_filter
 /home/yccra/.conda/envs/T2VZeroNew/lib/python3.8/site-packages/skimage/util/dtype.py:27: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
   np.bool8: (False, True),
-/home/yccra/Text2Video-Zero/annotator/openpose/body.py:20: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
-  model_dict = util.transfer(self.model, torch.load(model_path))
 ╭───────────────────── Traceback (most recent call last) ──────────────────────╮
 │ /home/yccra/Text2Video-Zero/inference_text_to_video.py:5 in <module>         │
 │                                                                              │
@@ -49,37 +47,34 @@ Currently Loaded Modulefiles:
 │   28 │                                                                       │
 │   29 │   def __call__(self, oriImg, hand=False):                             │
 │                                                                              │
-│ /home/yccra/Text2Video-Zero/annotator/openpose/body.py:20 in __init__        │
+│ /home/yccra/Text2Video-Zero/annotator/openpose/body.py:21 in __init__        │
 │                                                                              │
-│    17 │   │   if torch.cuda.is_available():                                  │
 │    18 │   │   │   self.model = self.model.cuda()                             │
 │    19 │   │   │   print('cuda')                                              │
-│ ❱  20 │   │   model_dict = util.transfer(self.model, torch.load(model_path)) │
-│    21 │   │   self.model.load_state_dict(model_dict)                         │
-│    22 │   │   self.model.eval()                                              │
-│    23                                                                        │
+│    20 │   │   # model_dict = util.transfer(self.model, torch.load(model_path │
+│ ❱  21 │   │   model_dict = util.transfer(self.model, torch.load(model_path,  │
+│    22 │   │   self.model.load_state_dict(model_dict)                         │
+│    23 │   │   self.model.eval()                                              │
+│    24                                                                        │
 │                                                                              │
 │ /home/yccra/.conda/envs/T2VZeroNew/lib/python3.8/site-packages/torch/seriali │
-│ zation.py:1114 in load                                                       │
+│ zation.py:1113 in load                                                       │
 │                                                                              │
+│   1110 │   │   │   try:                                                      │
 │   1111 │   │   │   │   return _legacy_load(opened_file, map_location, _weigh │
 │   1112 │   │   │   except RuntimeError as e:                                 │
-│   1113 │   │   │   │   raise pickle.UnpicklingError(_get_wo_message(str(e))) │
-│ ❱ 1114 │   │   return _legacy_load(                                          │
+│ ❱ 1113 │   │   │   │   raise pickle.UnpicklingError(_get_wo_message(str(e))) │
+│   1114 │   │   return _legacy_load(                                          │
 │   1115 │   │   │   opened_file, map_location, pickle_module, **pickle_load_a │
 │   1116 │   │   )                                                             │
-│   1117                                                                       │
-│                                                                              │
-│ /home/yccra/.conda/envs/T2VZeroNew/lib/python3.8/site-packages/torch/seriali │
-│ zation.py:1338 in _legacy_load                                               │
-│                                                                              │
-│   1335 │   │   │   f'Received object of type "{type(f)}". Please update to P │
-│   1336 │   │   │   "functionality.")                                         │
-│   1337 │                                                                     │
-│ ❱ 1338 │   magic_number = pickle_module.load(f, **pickle_load_args)          │
-│   1339 │   if magic_number != MAGIC_NUMBER:                                  │
-│   1340 │   │   raise RuntimeError("Invalid magic number; corrupt file?")     │
-│   1341 │   protocol_version = pickle_module.load(f, **pickle_load_args)      │
 ╰──────────────────────────────────────────────────────────────────────────────╯
-UnpicklingError: invalid load key, 'v'.
+UnpicklingError: Weights only load failed. Re-running `torch.load` with 
+`weights_only` set to `False` will likely succeed, but it can result in 
+arbitrary code execution. Do it only if you got the file from a trusted source.
+ Please file an issue with the following so that we can make `weights_only=True`
+compatible with your use case: WeightsUnpickler error: Unsupported operand 118
+
+Check the documentation of torch.load to learn more about types accepted by 
+default with weights_only 
+https://pytorch.org/docs/stable/generated/torch.load.html.
 srun: error: DGX-CN01: task 0: Exited with exit code 1
