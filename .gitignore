@@ -5,11 +5,5 @@ __pycache__/
 *.pth
 U-2-Net-master.zip
 
-# 忽略大小超過 1MB 的檔案
-*.[!.]*filter=lfs -crlf --text --ignore-case --pickaxe-regex -size-gt=1m
-
-# 忽略大小超過 100KB 的 log 檔案
-*.log filter=lfs -crlf --text --ignore-case --pickaxe-regex -size-gt=100k
-
-# 忽略大小超過 1GB 的目錄
-*/ filter=lfs -crlf --text --ignore-case --pickaxe-regex -size-gt=1g
+# 忽略所有 log 檔案
+*.log
