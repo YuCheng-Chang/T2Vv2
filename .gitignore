@@ -1,8 +1,10 @@
 __pycache__/
+
 *.mp4
 *.pt
 *.pth
-*U-2-Net-master
+U-2-Net-master.zip
+
 # 忽略大小超過 1MB 的檔案
 *.[!.]*filter=lfs -crlf --text --ignore-case --pickaxe-regex -size-gt=1m
 
