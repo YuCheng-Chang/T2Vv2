@@ -1,5 +1,10 @@
 __pycache__/
-<<<<<<< HEAD
+*.mp4
+# 忽略大小超過 10MB 的檔案
+*.[!.]*filter=lfs -crlf --text --ignore-case --pickaxe-regex -size-gt=10m
 
-=======
->>>>>>> 0d598340d0636e7a3ff895ad74b8444225852e19
+# 忽略大小超過 100KB 的 log 檔案
+*.log filter=lfs -crlf --text --ignore-case --pickaxe-regex -size-gt=100k
+
+# 忽略大小超過 1GB 的目錄
+*/ filter=lfs -crlf --text --ignore-case --pickaxe-regex -size-gt=1g
