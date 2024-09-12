@@ -11,14 +11,9 @@ model_list = get_model_list()
 #   print(idx, name)
 # prompt = "A horse galloping on a street"
 print(f'model name={model_list[3]}')
-<<<<<<< HEAD
-prompt = "A chinese landscape painting of a boat drifting in a river stream at the foot of mist-surronded green moutains. The with fluffy clouds floats by with elegant birds taking flight."
-params = {"t0": 44, "t1": 47 , "motion_field_strength_x" : 12, "motion_field_strength_y" : 12, "video_length": 8}
-=======
 # prompt = "A chinese landscape painting of a boat drifting in a river stream at the foot of mist-surronded green moutains. The with fluffy clouds floats by with elegant birds taking flight."
 prompt = "A chinese landscape painting of a boat drifting in a river stream at the foot of mist-surronded green moutains."
 params = {"t0": 44, "t1": 47 , "motion_field_strength_x" : 1, "motion_field_strength_y" : 1, "video_length": 90,"model_name":  model_list[3],"smooth_bg": False}
->>>>>>> ec80a2e8ce5c43d58ba275219776719f25422771
 # params = {"t0": 44, "t1": 47 , "motion_field_strength_x" : 1, "motion_field_strength_y" : 1, "video_length": 8, "chunk_size": 4, "model_name":  model_list[3]}
 # out_path, fps = f"./text2video_{prompt.replace(' ','_')}.mp4", 4
 out_path, fps = f"/home/yccra/Text2Video-Zero/text2video_landscape.mp4", 30
