@@ -7,6 +7,7 @@ from diffusers.utils import deprecate, logging, BaseOutput
 from einops import rearrange, repeat
 from torch.nn.functional import grid_sample
 import torchvision.transforms as T
+from torchvision.utils import save_image
 from transformers import CLIPFeatureExtractor, CLIPTextModel, CLIPTokenizer
 from diffusers.models import AutoencoderKL, UNet2DConditionModel
 from diffusers.schedulers import KarrasDiffusionSchedulers
@@ -14,6 +15,22 @@ from diffusers.pipelines.stable_diffusion import StableDiffusionSafetyChecker
 import PIL
 from PIL import Image
 from kornia.morphology import dilation
+import sys
+import os
+
+# 獲取當前文件的目錄
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 構建 U2-net-master 的絕對路徑
+u2net_path = os.path.join(current_dir, "U2_net_master")
+# 將路徑添加到 sys.path
+sys.path.append(u2net_path)
+
+# 打印 sys.path 以進行調試
+print("sys.path:", sys.path)
+
+
+# 然後導入
+from U2_net_master.model.u2net import U2NETP
 
 
 @dataclass
@@ -46,6 +63,11 @@ class TextToVideoPipeline(StableDiffusionPipeline):
     ):
         super().__init__(vae, text_encoder, tokenizer, unet, scheduler,
                          safety_checker, feature_extractor, requires_safety_checker)
+        self._device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.sod_model = U2NETP(3, 1)
+        self.sod_model.load_state_dict(torch.load("U2_net_master/saved_models/u2netp/u2netp.pth", map_location=self._device))
+        self.sod_model = self.sod_model.to(self._device)
+        self.sod_model.eval()
 
     def DDPM_forward(self, x0, t0, tMax, generator, device, shape, text_embeddings):
         rand_device = "cpu" if device.type == "mps" else device
@@ -366,6 +388,7 @@ class TextToVideoPipeline(StableDiffusionPipeline):
         if "x_t1_1" in ddim_res:
             x_t1_1 = ddim_res["x_t1_1"].detach()
         del ddim_res
+        
         del xT
         if use_motion_field:
             del x0
@@ -393,9 +416,10 @@ class TextToVideoPipeline(StableDiffusionPipeline):
 
             x0 = ddim_res["x0"].detach()
             del ddim_res
-            del x_t1
-            del x_t1_1
-            del x_t1_k
+            # del x_t1
+            # del x_t1_1
+            # del x_t1_k
+            print(f'x_t1:{x_t1.shape} x_t1_1:{x_t1_1.shape} x_t1_k:{x_t1_k.shape}')
         else:
             x_t1 = x_t1_1.clone()
             x_t1_1 = x_t1_1[:, :, :1, :, :].clone()
@@ -412,15 +436,34 @@ class TextToVideoPipeline(StableDiffusionPipeline):
                 z0_b = self.decode_latents(x0_b[None]).detach()
                 z0_b = rearrange(z0_b[0], "c f h w -> f h w c")
                 for frame_idx, z0_f in enumerate(z0_b):
-                    z0_f = torch.round(
-                        z0_f * 255).cpu().numpy().astype(np.uint8)
-                    # apply SOD detection
-                    m_f = torch.tensor(self.sod_model.process_data(
-                        z0_f), device=x0.device).to(x0.dtype)
-                    mask = T.Resize(
-                        size=(h, w), interpolation=T.InterpolationMode.NEAREST)(m_f[None])
+                    # z0_f = torch.round(
+                    #     z0_f * 255).cpu().numpy().astype(np.uint8)
+                    # 將圖像轉換為U-square Net所需的格式
+                    z0_f = (z0_f * 255).byte().cpu().numpy()
+                    # print(f'z0_f shape={z0_f.shape}')#(512,512,3)
+                    # 使用U-square Net進行預測
+                    with torch.no_grad():
+                        input_tensor = torch.from_numpy(z0_f).float().to(self.device)
+                        input_tensor = input_tensor.permute(2, 0, 1).unsqueeze(0)  # 調整為BCHW格式
+                        mask = self.sod_model(input_tensor)
+                        mask = mask[0]
+                        
+                    # 後處理預測結果
+                    mask = (mask > 0.5).float()  # 二值化，閾值可以根據需要調整
+                    # print(mask.shape)#(1,1,512,512)
+                    save_image(mask, 'grayscale_image_torch.png')
+                    # 調整大小和應用膨脹
+                    # mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask[None])
+                    mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask)
                     kernel = torch.ones(5, 5, device=x0.device, dtype=x0.dtype)
-                    mask = dilation(mask[None].to(x0.device), kernel)[0]
+                    mask = dilation(mask.to(x0.device), kernel)[0]
+                    # apply SOD detection
+                    # m_f = torch.tensor(self.sod_model.process_data(
+                    #     z0_f), device=x0.device).to(x0.dtype)
+                    # mask = T.Resize(
+                    #     size=(h, w), interpolation=T.InterpolationMode.NEAREST)(m_f[None])
+                    # kernel = torch.ones(5, 5, device=x0.device, dtype=x0.dtype)
+                    # mask = dilation(mask[None].to(x0.device), kernel)[0]
                     M_FG[batch_idx, frame_idx, :, :] = mask
 
             x_t1_1_fg_masked = x_t1_1 * \
