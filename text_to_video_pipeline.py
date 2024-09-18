@@ -428,6 +428,8 @@ class TextToVideoPipeline(StableDiffusionPipeline):
             x_t0_1 = x_t0_1[:, :, :1, :, :].clone()
 
         # smooth background
+        mask_idx=0
+        z0f_idx=0
         if smooth_bg:
             h, w = x0.shape[3], x0.shape[4]
             M_FG = torch.zeros((batch_size, video_length, h, w),
@@ -451,7 +453,10 @@ class TextToVideoPipeline(StableDiffusionPipeline):
                     # 後處理預測結果
                     mask = (mask > 0.5).float()  # 二值化，閾值可以根據需要調整
                     # print(mask.shape)#(1,1,512,512)
-                    save_image(mask, 'grayscale_image_torch.png')
+                    save_image(input_tensor,f'/home/yccra/Text2Video-Zero/SOD_results/z0f_{z0f_idx}.png')
+                    save_image(mask, f'/home/yccra/Text2Video-Zero/SOD_results/mask_{mask_idx}.png')
+                    mask_idx+=1
+                    z0f_idx+=1
                     # 調整大小和應用膨脹
                     # mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask[None])
                     mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask)
