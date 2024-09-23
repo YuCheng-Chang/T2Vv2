@@ -68,6 +68,8 @@ class TextToVideoPipeline(StableDiffusionPipeline):
         self.sod_model.load_state_dict(torch.load("U2_net_master/saved_models/u2netp/u2netp.pth", map_location=self._device))
         self.sod_model = self.sod_model.to(self._device)
         self.sod_model.eval()
+        self.save_mask_idx=0
+        self.save_z0f_idx=0
 
     def DDPM_forward(self, x0, t0, tMax, generator, device, shape, text_embeddings):
         rand_device = "cpu" if device.type == "mps" else device
@@ -428,8 +430,7 @@ class TextToVideoPipeline(StableDiffusionPipeline):
             x_t0_1 = x_t0_1[:, :, :1, :, :].clone()
 
         # smooth background
-        mask_idx=0
-        z0f_idx=0
+        
         if smooth_bg:
             h, w = x0.shape[3], x0.shape[4]
             M_FG = torch.zeros((batch_size, video_length, h, w),
@@ -437,26 +438,30 @@ class TextToVideoPipeline(StableDiffusionPipeline):
             for batch_idx, x0_b in enumerate(x0):
                 z0_b = self.decode_latents(x0_b[None]).detach()
                 z0_b = rearrange(z0_b[0], "c f h w -> f h w c")
+                # print(f'z0_b shape={z0_b.shape}')#(8, 512, 512, 3)
                 for frame_idx, z0_f in enumerate(z0_b):
+                    # 將圖像轉換為U-square Net所需的格式
                     # z0_f = torch.round(
                     #     z0_f * 255).cpu().numpy().astype(np.uint8)
-                    # 將圖像轉換為U-square Net所需的格式
-                    z0_f = (z0_f * 255).byte().cpu().numpy()
+                    # z0_f = (z0_f * 255).byte().cpu().numpy()
+                    z0_f=z0_f.cpu().numpy()
+                    print(f'median z0_f={np.median(z0_f)}')
                     # print(f'z0_f shape={z0_f.shape}')#(512,512,3)
                     # 使用U-square Net進行預測
                     with torch.no_grad():
                         input_tensor = torch.from_numpy(z0_f).float().to(self.device)
                         input_tensor = input_tensor.permute(2, 0, 1).unsqueeze(0)  # 調整為BCHW格式
+                        print(f'input_tensor shape:{input_tensor.shape}')
                         mask = self.sod_model(input_tensor)
                         mask = mask[0]
                         
                     # 後處理預測結果
                     mask = (mask > 0.5).float()  # 二值化，閾值可以根據需要調整
                     # print(mask.shape)#(1,1,512,512)
-                    save_image(input_tensor,f'/home/yccra/Text2Video-Zero/SOD_results/z0f_{z0f_idx}.png')
-                    save_image(mask, f'/home/yccra/Text2Video-Zero/SOD_results/mask_{mask_idx}.png')
-                    mask_idx+=1
-                    z0f_idx+=1
+                    save_image(input_tensor,f'/home/yccra/Text2Video-Zero/SOD_results/z0f_{self.save_z0f_idx}.png')
+                    save_image(mask, f'/home/yccra/Text2Video-Zero/SOD_results/mask_{self.save_mask_idx}.png')
+                    self.save_mask_idx+=1
+                    self.save_z0f_idx+=1
                     # 調整大小和應用膨脹
                     # mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask[None])
                     mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask)
