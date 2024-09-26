@@ -16,15 +16,15 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.51318359375
+median z0_f=0.5126953125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.55615234375
+median z0_f=0.5556640625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.52978515625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.59033203125
+median z0_f=0.5908203125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.55322265625
+median z0_f=0.5546875
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.609375
 input_tensor shape:torch.Size([1, 3, 512, 512])
@@ -42,17 +42,17 @@ median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.52001953125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.57177734375
+median z0_f=0.5712890625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5595703125
+median z0_f=0.56005859375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.55517578125
+median z0_f=0.5546875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.583984375
+median z0_f=0.58349609375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.609375
+median z0_f=0.6103515625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6181640625
+median z0_f=0.61865234375
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 3 / 13
@@ -66,15 +66,15 @@ median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.52734375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.62451171875
+median z0_f=0.6240234375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5771484375
+median z0_f=0.576171875
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.5625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6279296875
+median z0_f=0.62841796875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.59521484375
+median z0_f=0.59619140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.62158203125
 input_tensor shape:torch.Size([1, 3, 512, 512])
@@ -88,19 +88,19 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.55322265625
+median z0_f=0.55419921875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.62646484375
+median z0_f=0.6259765625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5908203125
+median z0_f=0.591796875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.603515625
+median z0_f=0.60302734375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.60986328125
+median z0_f=0.6103515625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61572265625
+median z0_f=0.61474609375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.65771484375
+median z0_f=0.65869140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 5 / 13
@@ -112,19 +112,19 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.53076171875
+median z0_f=0.53125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.59033203125
+median z0_f=0.59130859375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5712890625
+median z0_f=0.57177734375
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.5986328125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6181640625
+median z0_f=0.61865234375
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.6279296875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6533203125
+median z0_f=0.65283203125
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 6 / 13
@@ -138,17 +138,17 @@ median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.55322265625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.58154296875
+median z0_f=0.58056640625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.57177734375
+median z0_f=0.572265625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.60888671875
+median z0_f=0.6103515625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.60400390625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.64599609375
+median z0_f=0.646484375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.662109375
+median z0_f=0.66162109375
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 7 / 13
@@ -160,19 +160,19 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.53271484375
+median z0_f=0.533203125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.63232421875
+median z0_f=0.6318359375
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.572265625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6171875
+median z0_f=0.61669921875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6552734375
+median z0_f=0.65576171875
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.60791015625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.685546875
+median z0_f=0.68505859375
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 8 / 13
@@ -184,19 +184,19 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5361328125
+median z0_f=0.53564453125
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.568359375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5791015625
+median z0_f=0.57958984375
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.6259765625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.65576171875
+median z0_f=0.65625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6259765625
+median z0_f=0.62646484375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.7099609375
+median z0_f=0.71142578125
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 9 / 13
@@ -208,15 +208,15 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5361328125
+median z0_f=0.53759765625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.63671875
+median z0_f=0.63623046875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61474609375
+median z0_f=0.6142578125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5810546875
+median z0_f=0.58154296875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.64892578125
+median z0_f=0.6494140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.60595703125
 input_tensor shape:torch.Size([1, 3, 512, 512])
@@ -232,11 +232,11 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.546875
+median z0_f=0.548828125
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.59765625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.57421875
+median z0_f=0.5751953125
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.59228515625
 input_tensor shape:torch.Size([1, 3, 512, 512])
@@ -256,19 +256,19 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.52734375
+median z0_f=0.52685546875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5849609375
+median z0_f=0.58544921875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.580078125
+median z0_f=0.5810546875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.560546875
+median z0_f=0.56103515625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61328125
+median z0_f=0.61376953125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.658203125
+median z0_f=0.6591796875
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.63232421875
+median z0_f=0.63330078125
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 12 / 13
@@ -280,19 +280,19 @@ Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device =
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
 median z0_f=0.5244140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5341796875
+median z0_f=0.53466796875
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.5869140625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.53955078125
+median z0_f=0.54052734375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.54931640625
+median z0_f=0.5498046875
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.61328125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6767578125
+median z0_f=0.67724609375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.69482421875
+median z0_f=0.6953125
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 13 / 13
@@ -308,552 +308,552 @@ median z0_f=0.693359375
 input_tensor shape:torch.Size([1, 3, 512, 512])
 median z0_f=0.57666015625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.58447265625
+median z0_f=0.583984375
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5234375
+median z0_f=0.52392578125
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.60107421875
+median z0_f=0.6025390625
 input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.63818359375
+median z0_f=0.63916015625
 input_tensor shape:torch.Size([1, 3, 512, 512])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([7, 4, 64, 64]), device = cuda:0, type = torch.float16
 Frame 0:
   Min value: 0.0
-  Max value: 0.8974609375
-  Mean value: 0.49520063400268555
+  Max value: 0.8984375
+  Mean value: 0.4945138990879059
   Contains NaN: False
   Contains Inf: False
 Frame 1:
   Min value: 0.0
-  Max value: 0.93115234375
-  Mean value: 0.5039084553718567
+  Max value: 0.92578125
+  Mean value: 0.5029001832008362
   Contains NaN: False
   Contains Inf: False
 Frame 2:
   Min value: 0.0
-  Max value: 0.904296875
-  Mean value: 0.49256202578544617
+  Max value: 0.90283203125
+  Mean value: 0.49303996562957764
   Contains NaN: False
   Contains Inf: False
 Frame 3:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5094180703163147
+  Mean value: 0.5095023512840271
   Contains NaN: False
   Contains Inf: False
 Frame 4:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5188134908676147
+  Mean value: 0.5189547538757324
   Contains NaN: False
   Contains Inf: False
 Frame 5:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5316131711006165
+  Mean value: 0.5316621661186218
   Contains NaN: False
   Contains Inf: False
 Frame 6:
   Min value: 0.0
-  Max value: 0.8798828125
-  Mean value: 0.526427686214447
+  Max value: 0.90625
+  Mean value: 0.5269632339477539
   Contains NaN: False
   Contains Inf: False
 Frame 7:
   Min value: 0.0
-  Max value: 0.96533203125
-  Mean value: 0.5027876496315002
+  Max value: 0.9736328125
+  Mean value: 0.5030450224876404
   Contains NaN: False
   Contains Inf: False
 Frame 8:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5156285166740417
+  Mean value: 0.5162767767906189
   Contains NaN: False
   Contains Inf: False
 Frame 9:
   Min value: 0.0
-  Max value: 0.9736328125
-  Mean value: 0.5104977488517761
+  Max value: 0.97998046875
+  Mean value: 0.5099766254425049
   Contains NaN: False
   Contains Inf: False
 Frame 10:
   Min value: 0.0
   Max value: 0.9150390625
-  Mean value: 0.5105115175247192
+  Mean value: 0.5110217332839966
   Contains NaN: False
   Contains Inf: False
 Frame 11:
   Min value: 0.0
-  Max value: 0.9462890625
-  Mean value: 0.5244473218917847
+  Max value: 0.94677734375
+  Mean value: 0.5243549346923828
   Contains NaN: False
   Contains Inf: False
 Frame 12:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5374395847320557
+  Mean value: 0.5372452735900879
   Contains NaN: False
   Contains Inf: False
 Frame 13:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5493369102478027
+  Mean value: 0.5506603121757507
   Contains NaN: False
   Contains Inf: False
 Frame 14:
   Min value: 0.0
-  Max value: 0.9443359375
-  Mean value: 0.5193449258804321
+  Max value: 0.94091796875
+  Mean value: 0.5190178751945496
   Contains NaN: False
   Contains Inf: False
 Frame 15:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5507712960243225
+  Mean value: 0.552701473236084
   Contains NaN: False
   Contains Inf: False
 Frame 16:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5379285216331482
+  Mean value: 0.5376280546188354
   Contains NaN: False
   Contains Inf: False
 Frame 17:
   Min value: 0.0
-  Max value: 0.86962890625
-  Mean value: 0.5244883894920349
+  Max value: 0.869140625
+  Mean value: 0.5245155692100525
   Contains NaN: False
   Contains Inf: False
 Frame 18:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5585253238677979
+  Mean value: 0.558885931968689
   Contains NaN: False
   Contains Inf: False
 Frame 19:
   Min value: 0.0
-  Max value: 0.923828125
-  Mean value: 0.5347829461097717
+  Max value: 0.927734375
+  Mean value: 0.5344603061676025
   Contains NaN: False
   Contains Inf: False
 Frame 20:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5540775656700134
+  Mean value: 0.5537364482879639
   Contains NaN: False
   Contains Inf: False
 Frame 21:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.551100492477417
+  Mean value: 0.5515925884246826
   Contains NaN: False
   Contains Inf: False
 Frame 22:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5637280941009521
+  Mean value: 0.5639488101005554
   Contains NaN: False
   Contains Inf: False
 Frame 23:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5556952357292175
+  Mean value: 0.5557827353477478
   Contains NaN: False
   Contains Inf: False
 Frame 24:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5617830157279968
+  Mean value: 0.5613030791282654
   Contains NaN: False
   Contains Inf: False
 Frame 25:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5759791731834412
+  Mean value: 0.5758952498435974
   Contains NaN: False
   Contains Inf: False
 Frame 26:
   Min value: 0.0
   Max value: 0.9228515625
-  Mean value: 0.551426351070404
+  Mean value: 0.551095187664032
   Contains NaN: False
   Contains Inf: False
 Frame 27:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5524848699569702
+  Mean value: 0.5533061027526855
   Contains NaN: False
   Contains Inf: False
 Frame 28:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5355798602104187
+  Mean value: 0.5354539752006531
   Contains NaN: False
   Contains Inf: False
 Frame 29:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5514059066772461
+  Mean value: 0.5510373711585999
   Contains NaN: False
   Contains Inf: False
 Frame 30:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5600044131278992
+  Mean value: 0.556510865688324
   Contains NaN: False
   Contains Inf: False
 Frame 31:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5668379664421082
+  Mean value: 0.5658767223358154
   Contains NaN: False
   Contains Inf: False
 Frame 32:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5626791715621948
+  Mean value: 0.5629859566688538
   Contains NaN: False
   Contains Inf: False
 Frame 33:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5678386092185974
+  Mean value: 0.5683989524841309
   Contains NaN: False
   Contains Inf: False
 Frame 34:
   Min value: 0.0
-  Max value: 0.94677734375
-  Mean value: 0.5491605997085571
+  Max value: 0.94775390625
+  Mean value: 0.5493550300598145
   Contains NaN: False
   Contains Inf: False
 Frame 35:
   Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5352188348770142
+  Max value: 0.9814453125
+  Mean value: 0.5353053212165833
   Contains NaN: False
   Contains Inf: False
 Frame 36:
   Min value: 0.0
-  Max value: 0.96435546875
-  Mean value: 0.54327791929245
+  Max value: 0.96337890625
+  Mean value: 0.5429609417915344
   Contains NaN: False
   Contains Inf: False
 Frame 37:
   Min value: 0.0
-  Max value: 0.9912109375
-  Mean value: 0.5516233444213867
+  Max value: 0.998046875
+  Mean value: 0.5511505603790283
   Contains NaN: False
   Contains Inf: False
 Frame 38:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5763936638832092
+  Mean value: 0.5771928429603577
   Contains NaN: False
   Contains Inf: False
 Frame 39:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5764325261116028
+  Mean value: 0.5750726461410522
   Contains NaN: False
   Contains Inf: False
 Frame 40:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.573172390460968
+  Mean value: 0.5733781456947327
   Contains NaN: False
   Contains Inf: False
 Frame 41:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5694172382354736
+  Mean value: 0.5705494284629822
   Contains NaN: False
   Contains Inf: False
 Frame 42:
   Min value: 0.0
-  Max value: 0.91796875
-  Mean value: 0.5321812033653259
+  Max value: 0.9248046875
+  Mean value: 0.5319012999534607
   Contains NaN: False
   Contains Inf: False
 Frame 43:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.574138343334198
+  Mean value: 0.5747190117835999
   Contains NaN: False
   Contains Inf: False
 Frame 44:
   Min value: 0.0
   Max value: 0.966796875
-  Mean value: 0.5487193465232849
+  Mean value: 0.5485518574714661
   Contains NaN: False
   Contains Inf: False
 Frame 45:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5729655623435974
+  Mean value: 0.5732473731040955
   Contains NaN: False
   Contains Inf: False
 Frame 46:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5790135860443115
+  Mean value: 0.5797930359840393
   Contains NaN: False
   Contains Inf: False
 Frame 47:
   Min value: 0.0
-  Max value: 0.94873046875
-  Mean value: 0.5680107474327087
+  Max value: 0.94970703125
+  Mean value: 0.5678896307945251
   Contains NaN: False
   Contains Inf: False
 Frame 48:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5697881579399109
+  Mean value: 0.5698105692863464
   Contains NaN: False
   Contains Inf: False
 Frame 49:
   Min value: 0.0
-  Max value: 0.888671875
-  Mean value: 0.531519889831543
+  Max value: 0.88671875
+  Mean value: 0.5316367149353027
   Contains NaN: False
   Contains Inf: False
 Frame 50:
   Min value: 0.0
-  Max value: 0.9013671875
-  Mean value: 0.5484477281570435
+  Max value: 0.900390625
+  Mean value: 0.548359215259552
   Contains NaN: False
   Contains Inf: False
 Frame 51:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.552567720413208
+  Mean value: 0.5529114603996277
   Contains NaN: False
   Contains Inf: False
 Frame 52:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5711586475372314
+  Mean value: 0.5710616707801819
   Contains NaN: False
   Contains Inf: False
 Frame 53:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5978054404258728
+  Mean value: 0.598823070526123
   Contains NaN: False
   Contains Inf: False
 Frame 54:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.603175938129425
+  Mean value: 0.6037910580635071
   Contains NaN: False
   Contains Inf: False
 Frame 55:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5997098088264465
+  Mean value: 0.5995199680328369
   Contains NaN: False
   Contains Inf: False
 Frame 56:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5482722520828247
+  Mean value: 0.5535627007484436
   Contains NaN: False
   Contains Inf: False
 Frame 57:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5827776193618774
+  Mean value: 0.5838862061500549
   Contains NaN: False
   Contains Inf: False
 Frame 58:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5741207599639893
+  Mean value: 0.5747460126876831
   Contains NaN: False
   Contains Inf: False
 Frame 59:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.56740403175354
+  Mean value: 0.5685523152351379
   Contains NaN: False
   Contains Inf: False
 Frame 60:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.585523784160614
+  Mean value: 0.5865811705589294
   Contains NaN: False
   Contains Inf: False
 Frame 61:
   Min value: 0.0
-  Max value: 0.92578125
-  Mean value: 0.5549672245979309
+  Max value: 0.9248046875
+  Mean value: 0.5546839833259583
   Contains NaN: False
   Contains Inf: False
 Frame 62:
   Min value: 0.0
-  Max value: 0.947265625
-  Mean value: 0.5686410665512085
+  Max value: 0.951171875
+  Mean value: 0.5692877769470215
   Contains NaN: False
   Contains Inf: False
 Frame 63:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5646523833274841
+  Mean value: 0.5646187663078308
   Contains NaN: False
   Contains Inf: False
 Frame 64:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5740234851837158
+  Mean value: 0.5741517543792725
   Contains NaN: False
   Contains Inf: False
 Frame 65:
   Min value: 0.0
-  Max value: 0.9912109375
-  Mean value: 0.5533687472343445
+  Max value: 0.994140625
+  Mean value: 0.5536871552467346
   Contains NaN: False
   Contains Inf: False
 Frame 66:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5705946087837219
+  Mean value: 0.5707323551177979
   Contains NaN: False
   Contains Inf: False
 Frame 67:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5750609040260315
+  Mean value: 0.5755574107170105
   Contains NaN: False
   Contains Inf: False
 Frame 68:
-  Min value: 0.000732421875
+  Min value: 0.000244140625
   Max value: 0.912109375
-  Mean value: 0.5651777386665344
+  Mean value: 0.5651260018348694
   Contains NaN: False
   Contains Inf: False
 Frame 69:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5762481093406677
+  Mean value: 0.577455997467041
   Contains NaN: False
   Contains Inf: False
 Frame 70:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5646407008171082
+  Mean value: 0.5657532811164856
   Contains NaN: False
   Contains Inf: False
 Frame 71:
   Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5605432391166687
+  Max value: 0.9814453125
+  Mean value: 0.5603848099708557
   Contains NaN: False
   Contains Inf: False
 Frame 72:
   Min value: 0.0
   Max value: 0.9716796875
-  Mean value: 0.548779308795929
+  Mean value: 0.5486133694648743
   Contains NaN: False
   Contains Inf: False
 Frame 73:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5591211915016174
+  Mean value: 0.5593909621238708
   Contains NaN: False
   Contains Inf: False
 Frame 74:
   Min value: 0.0
-  Max value: 0.974609375
-  Mean value: 0.566645085811615
+  Max value: 0.9755859375
+  Mean value: 0.5689588189125061
   Contains NaN: False
   Contains Inf: False
 Frame 75:
   Min value: 0.0
-  Max value: 0.97021484375
-  Mean value: 0.5707698464393616
+  Max value: 0.9697265625
+  Mean value: 0.5710911750793457
   Contains NaN: False
   Contains Inf: False
 Frame 76:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5901227593421936
+  Mean value: 0.5901807546615601
   Contains NaN: False
   Contains Inf: False
 Frame 77:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5592128038406372
+  Mean value: 0.5569854378700256
   Contains NaN: False
   Contains Inf: False
 Frame 78:
   Min value: 0.0
   Max value: 0.96484375
-  Mean value: 0.559622585773468
+  Mean value: 0.5601946711540222
   Contains NaN: False
   Contains Inf: False
 Frame 79:
   Min value: 0.0
-  Max value: 0.9501953125
-  Mean value: 0.5439174175262451
+  Max value: 0.953125
+  Mean value: 0.5424611568450928
   Contains NaN: False
   Contains Inf: False
 Frame 80:
-  Min value: 0.016357421875
-  Max value: 0.9052734375
-  Mean value: 0.5434854626655579
+  Min value: 0.015380859375
+  Max value: 0.90625
+  Mean value: 0.5434622168540955
   Contains NaN: False
   Contains Inf: False
 Frame 81:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5739777684211731
+  Mean value: 0.5737050175666809
   Contains NaN: False
   Contains Inf: False
 Frame 82:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5999345183372498
+  Mean value: 0.6009707450866699
   Contains NaN: False
   Contains Inf: False
 Frame 83:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.591073215007782
+  Mean value: 0.5904970169067383
   Contains NaN: False
   Contains Inf: False
 Frame 84:
   Min value: 0.0
-  Max value: 0.9951171875
-  Mean value: 0.584465742111206
+  Max value: 0.99560546875
+  Mean value: 0.5843318104743958
   Contains NaN: False
   Contains Inf: False
 Frame 85:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5824692845344543
+  Mean value: 0.5828843712806702
   Contains NaN: False
   Contains Inf: False
 Frame 86:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.576682984828949
+  Mean value: 0.5756990313529968
   Contains NaN: False
   Contains Inf: False
 Frame 87:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5700865387916565
+  Mean value: 0.5707654356956482
   Contains NaN: False
   Contains Inf: False
 Frame 88:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5829050540924072
+  Mean value: 0.5822433829307556
   Contains NaN: False
   Contains Inf: False
 Frame 89:
   Min value: 0.0
   Max value: 1.0
-  Mean value: 0.5847600102424622
+  Mean value: 0.5850852131843567
   Contains NaN: False
   Contains Inf: False

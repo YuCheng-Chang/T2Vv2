@@ -64,10 +64,10 @@ class TextToVideoPipeline(StableDiffusionPipeline):
         super().__init__(vae, text_encoder, tokenizer, unet, scheduler,
                          safety_checker, feature_extractor, requires_safety_checker)
         self._device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        # self.sod_model = U2NETP(3, 1)
-        # self.sod_model.load_state_dict(torch.load("U2_net_master/saved_models/u2netp/u2netp.pth", map_location=self._device))
-        self.sod_model = U2NET(3, 1)
-        self.sod_model.load_state_dict(torch.load("U2_net_master/saved_models/u2net/u2net.pth", map_location=self._device))
+        self.sod_model = U2NETP(3, 1)
+        self.sod_model.load_state_dict(torch.load("U2_net_master/saved_models/u2netp/u2netp.pth", map_location=self._device))
+        # self.sod_model = U2NET(3, 1)
+        # self.sod_model.load_state_dict(torch.load("U2_net_master/saved_models/u2net/u2net.pth", map_location=self._device))
         self.sod_model = self.sod_model.to(self._device)
         self.sod_model.eval()
         self.save_mask_idx=0
