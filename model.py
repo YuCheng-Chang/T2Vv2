@@ -11,6 +11,8 @@ from text_to_video_pipeline import TextToVideoPipeline
 import utils
 import gradio_utils
 import os
+from PIL import Image
+
 on_huggingspace = os.environ.get("SPACE_AUTHOR_NAME") == "PAIR"
 
 class ModelType(Enum):
@@ -491,4 +493,20 @@ class Model:
                                 split_to_chunks=True,
                                 chunk_size=chunk_size,
                                 )
-        return utils.create_video(result, fps, path=path, watermark=gradio_utils.logo_name_to_path(watermark))
+        # print(f"similarity Score: ", round(utils.generateScore(image1, image2), 2))
+        print(f'type of result={type(result)}, shape={result.shape}')
+        for i in range(len(result)):
+            # 將數據轉換為 float32 以避免精度損失
+            frame = result[i,:,:,:].astype(np.float32)
+            
+            # 確定數據範圍並進行相應的縮放
+            if frame.max() <= 1.0:
+                frame = (frame * 255).clip(0, 255).astype(np.uint8)
+            else:
+                frame = frame.clip(0, 255).astype(np.uint8)
+            
+            # 現在創建 PIL Image
+            im = Image.fromarray(frame)
+            im.save(f"/home/yccra/Text2Video-Zero/frames/{i+1}.png")
+        scores=utils.generateScore(result)
+        return utils.create_video(result, fps, path=path, watermark=gradio_utils.logo_name_to_path(watermark)),scores

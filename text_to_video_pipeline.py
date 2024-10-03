@@ -31,7 +31,7 @@ print("sys.path:", sys.path)
 
 # 然後導入
 from U2_net_master.model.u2net import U2NETP, U2NET
-
+from U2_net_master.model.preprocessing import *
 
 @dataclass
 class TextToVideoPipelineOutput(BaseOutput):
@@ -64,12 +64,14 @@ class TextToVideoPipeline(StableDiffusionPipeline):
         super().__init__(vae, text_encoder, tokenizer, unet, scheduler,
                          safety_checker, feature_extractor, requires_safety_checker)
         self._device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print(f'current device : {self._device}')
         self.sod_model = U2NETP(3, 1)
         self.sod_model.load_state_dict(torch.load("U2_net_master/saved_models/u2netp/u2netp.pth", map_location=self._device))
         # self.sod_model = U2NET(3, 1)
         # self.sod_model.load_state_dict(torch.load("U2_net_master/saved_models/u2net/u2net.pth", map_location=self._device))
         self.sod_model = self.sod_model.to(self._device)
         self.sod_model.eval()
+        self.sod_transform = T.Compose([RescaleT(320),ToTensorLab(flag=0)])
         self.save_mask_idx=0
         self.save_z0f_idx=0
 
@@ -435,6 +437,7 @@ class TextToVideoPipeline(StableDiffusionPipeline):
         
         if smooth_bg:
             h, w = x0.shape[3], x0.shape[4]
+            # print(f'(h,w) = {h},{w}')#(h,w) = (64,64)
             M_FG = torch.zeros((batch_size, video_length, h, w),
                                device=x0.device).to(x0.dtype)
             for batch_idx, x0_b in enumerate(x0):
@@ -447,15 +450,26 @@ class TextToVideoPipeline(StableDiffusionPipeline):
                     #     z0_f * 255).cpu().numpy().astype(np.uint8)
                     # z0_f = (z0_f * 255).byte().cpu().numpy()
                     z0_f=z0_f.cpu().numpy()
-                    print(f'median z0_f={np.median(z0_f)}')
+                    # print(f'median z0_f={np.median(z0_f)}')
                     # print(f'z0_f shape={z0_f.shape}')#(512,512,3)
                     # 使用U-square Net進行預測
                     with torch.no_grad():
                         input_tensor = torch.from_numpy(z0_f).float().to(self.device)
                         input_tensor = input_tensor.permute(2, 0, 1).unsqueeze(0)  # 調整為BCHW格式
-                        print(f'input_tensor shape:{input_tensor.shape}')
+                        print(f'input_tensor shape before transform:{input_tensor.shape}')
+                        input_tensor = self.sod_transform(input_tensor)
+                        input_tensor = input_tensor.to(self._device)
+                        print(f'input_tensor shape before sod_model:{input_tensor.shape}')
+                        if input_tensor.dim() == 3:
+                            input_tensor = input_tensor.unsqueeze(0)  # 添加批次維度
+                        print(f'input_tensor shape after adjustment:{input_tensor.shape}')
                         mask = self.sod_model(input_tensor)
                         mask = mask[0]
+                        print(f"Mask shape after sod_model: {mask.shape}")
+                        mask = normPred(mask[:,0,:,:]) 
+                        print(f"Mask shape after normPred: {mask.shape}")
+                        mask = resizePred(mask,(h,w))
+                        print(f"Mask shape after resizePred: {mask.shape}")
                         
                     # 後處理預測結果
                     mask = (mask > 0.5).float()  # 二值化，閾值可以根據需要調整
@@ -466,9 +480,13 @@ class TextToVideoPipeline(StableDiffusionPipeline):
                     self.save_z0f_idx+=1
                     # 調整大小和應用膨脹
                     # mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask[None])
-                    mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask)
+                    # mask = T.Resize(size=(h, w), interpolation=T.InterpolationMode.NEAREST)(mask)
+                    # kernel = torch.ones(5, 5, device=x0.device, dtype=x0.dtype)
+                   # 調整大小和應用膨脹
+                    mask = mask.unsqueeze(0).unsqueeze(0)  # 添加批次和通道維度
+                    print(f"Mask shape before dilation: {mask.shape}")
                     kernel = torch.ones(5, 5, device=x0.device, dtype=x0.dtype)
-                    mask = dilation(mask.to(x0.device), kernel)[0]
+                    mask = dilation(mask.to(x0.device), kernel)[0, 0]  # 移除批次和通道維度
                     # apply SOD detection
                     # m_f = torch.tensor(self.sod_model.process_data(
                     #     z0_f), device=x0.device).to(x0.dtype)
@@ -476,6 +494,8 @@ class TextToVideoPipeline(StableDiffusionPipeline):
                     #     size=(h, w), interpolation=T.InterpolationMode.NEAREST)(m_f[None])
                     # kernel = torch.ones(5, 5, device=x0.device, dtype=x0.dtype)
                     # mask = dilation(mask[None].to(x0.device), kernel)[0]
+                    # 確保 mask 的形狀是 (h, w)
+                    print(f"Mask shape after dilation: {mask.shape}")
                     M_FG[batch_idx, frame_idx, :, :] = mask
 
             x_t1_1_fg_masked = x_t1_1 * \

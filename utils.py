@@ -14,6 +14,8 @@ from annotator.canny import CannyDetector
 from annotator.openpose import OpenposeDetector
 from annotator.midas import MidasDetector
 import decord
+import open_clip
+from sentence_transformers import util
 
 apply_canny = CannyDetector()
 apply_openpose = OpenposeDetector()
@@ -104,12 +106,12 @@ def create_video(frames, fps, rescale=False, path=None, watermark=None):
         if rescale:
             x = (x + 1.0) / 2.0  # -1,1 -> 0,1
         # 添加調試信息
-        print(f"Frame {i}:")
-        print(f"  Min value: {x.min().item()}")
-        print(f"  Max value: {x.max().item()}")
-        print(f"  Mean value: {x.mean().item()}")
-        print(f"  Contains NaN: {torch.isnan(x).any().item()}")
-        print(f"  Contains Inf: {torch.isinf(x).any().item()}")
+        # print(f"Frame {i}:")
+        # print(f"  Min value: {x.min().item()}")
+        # print(f"  Max value: {x.max().item()}")
+        # print(f"  Mean value: {x.mean().item()}")
+        # print(f"  Contains NaN: {torch.isnan(x).any().item()}")
+        # print(f"  Contains Inf: {torch.isinf(x).any().item()}")
         
         # 檢查是否有超出範圍的值
         if x.min() < 0 or x.max() > 1:
@@ -186,6 +188,37 @@ def post_process_gif(list_of_results, image_resolution):
     output_file = "/tmp/ddxk.gif"
     imageio.mimsave(output_file, list_of_results, fps=4)
     return output_file
+
+# image processing model
+def imageEncoder(img,model,preprocess):
+    device = next(model.parameters()).device
+    # 確保 img 是正確的數據類型和範圍
+    if img.dtype != np.uint8:
+        if img.max() <= 1.0:
+            img = (img * 255).clip(0, 255).astype(np.uint8)
+        else:
+            img = img.clip(0, 255).astype(np.uint8)
+
+    print(f'ImageEncoder img shape={img.shape}')
+    img1 = Image.fromarray(img).convert('RGB')
+    img1 = preprocess(img1).unsqueeze(0).to(device)
+    
+    with torch.no_grad():
+        img1 = model.encode_image(img1)
+    
+    return img1
+def generateScore(frames):
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-16-plus-240', pretrained="laion400m_e32")
+    model.to(device)
+    scores=np.empty(len(frames)-1)
+    for i in range(len(frames)-1):
+        img1 = imageEncoder(frames[i,:,:,:],model,preprocess)
+        img2 = imageEncoder(frames[i+1,:,:,:],model,preprocess)
+        scores[i] = util.pytorch_cos_sim(img1, img2).item()
+    # test_img = cv2.imread(image1, cv2.IMREAD_UNCHANGED)
+    rounded_scores = np.round(scores * 100, 2)
+    return rounded_scores
 
 
 class CrossFrameAttnProcessor:

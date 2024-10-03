@@ -7,6 +7,7 @@ cuda
 model name=CompVis/stable-diffusion-v1-4
 Module Text2Video
 Model update
+current device : cuda
 Processing chunk 1 / 13
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
@@ -14,22 +15,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5126953125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5556640625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.52978515625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5908203125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5546875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.609375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.59423828125
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 2 / 13
 t0 = 881 t1 = 941
@@ -38,22 +87,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.52001953125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5712890625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.56005859375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5546875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.58349609375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6103515625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61865234375
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 3 / 13
 t0 = 881 t1 = 941
@@ -62,22 +159,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.52734375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6240234375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.576171875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.62841796875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.59619140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.62158203125
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 4 / 13
 t0 = 881 t1 = 941
@@ -86,22 +231,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.55419921875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6259765625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.591796875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.60302734375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6103515625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61474609375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.65869140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 5 / 13
 t0 = 881 t1 = 941
@@ -110,22 +303,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.53125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.59130859375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.57177734375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5986328125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61865234375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6279296875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.65283203125
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 6 / 13
 t0 = 881 t1 = 941
@@ -134,22 +375,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.55322265625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.58056640625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.572265625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6103515625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.60400390625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.646484375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.66162109375
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 7 / 13
 t0 = 881 t1 = 941
@@ -158,22 +447,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.533203125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6318359375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.572265625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61669921875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.65576171875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.60791015625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.68505859375
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 8 / 13
 t0 = 881 t1 = 941
@@ -182,22 +519,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.53564453125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.568359375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.57958984375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6259765625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.65625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.62646484375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.71142578125
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 9 / 13
 t0 = 881 t1 = 941
@@ -206,22 +591,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.53759765625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.63623046875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6142578125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.58154296875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6494140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.60595703125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.693359375
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 10 / 13
 t0 = 881 t1 = 941
@@ -230,22 +663,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.548828125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.59765625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5751953125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.59228515625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6005859375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.619140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.642578125
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 11 / 13
 t0 = 881 t1 = 941
@@ -254,22 +735,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.52685546875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.58544921875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5810546875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.56103515625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61376953125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6591796875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.63330078125
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 12 / 13
 t0 = 881 t1 = 941
@@ -278,22 +807,70 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 8, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 7, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.53466796875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5869140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.54052734375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.5498046875
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.61328125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.67724609375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6953125
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
 Processing chunk 13 / 13
 t0 = 881 t1 = 941
@@ -302,558 +879,239 @@ latent t1 found at i=1, t = 961
 latent t0 found at i = 4, t = 901
 Continue DDIM with i = 2, t = 941, latent = torch.Size([7, 4, 64, 64]), device = cuda:0, type = torch.float16
 x_t1:torch.Size([1, 4, 7, 64, 64]) x_t1_1:torch.Size([1, 4, 1, 64, 64]) x_t1_k:torch.Size([1, 4, 6, 64, 64])
-median z0_f=0.5244140625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.693359375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.57666015625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.583984375
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.52392578125
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.6025390625
-input_tensor shape:torch.Size([1, 3, 512, 512])
-median z0_f=0.63916015625
-input_tensor shape:torch.Size([1, 3, 512, 512])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
+input_tensor shape before transform:torch.Size([1, 3, 512, 512])
+input_tensor shape before sod_model:torch.Size([3, 320, 320])
+input_tensor shape after adjustment:torch.Size([1, 3, 320, 320])
+Mask shape after sod_model: torch.Size([1, 1, 320, 320])
+Mask shape after normPred: torch.Size([1, 320, 320])
+Mask shape after resizePred: torch.Size([64, 64])
+Mask shape before dilation: torch.Size([1, 1, 64, 64])
+Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([7, 4, 64, 64]), device = cuda:0, type = torch.float16
-Frame 0:
-  Min value: 0.0
-  Max value: 0.8984375
-  Mean value: 0.4945138990879059
-  Contains NaN: False
-  Contains Inf: False
-Frame 1:
-  Min value: 0.0
-  Max value: 0.92578125
-  Mean value: 0.5029001832008362
-  Contains NaN: False
-  Contains Inf: False
-Frame 2:
-  Min value: 0.0
-  Max value: 0.90283203125
-  Mean value: 0.49303996562957764
-  Contains NaN: False
-  Contains Inf: False
-Frame 3:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5095023512840271
-  Contains NaN: False
-  Contains Inf: False
-Frame 4:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5189547538757324
-  Contains NaN: False
-  Contains Inf: False
-Frame 5:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5316621661186218
-  Contains NaN: False
-  Contains Inf: False
-Frame 6:
-  Min value: 0.0
-  Max value: 0.90625
-  Mean value: 0.5269632339477539
-  Contains NaN: False
-  Contains Inf: False
-Frame 7:
-  Min value: 0.0
-  Max value: 0.9736328125
-  Mean value: 0.5030450224876404
-  Contains NaN: False
-  Contains Inf: False
-Frame 8:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5162767767906189
-  Contains NaN: False
-  Contains Inf: False
-Frame 9:
-  Min value: 0.0
-  Max value: 0.97998046875
-  Mean value: 0.5099766254425049
-  Contains NaN: False
-  Contains Inf: False
-Frame 10:
-  Min value: 0.0
-  Max value: 0.9150390625
-  Mean value: 0.5110217332839966
-  Contains NaN: False
-  Contains Inf: False
-Frame 11:
-  Min value: 0.0
-  Max value: 0.94677734375
-  Mean value: 0.5243549346923828
-  Contains NaN: False
-  Contains Inf: False
-Frame 12:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5372452735900879
-  Contains NaN: False
-  Contains Inf: False
-Frame 13:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5506603121757507
-  Contains NaN: False
-  Contains Inf: False
-Frame 14:
-  Min value: 0.0
-  Max value: 0.94091796875
-  Mean value: 0.5190178751945496
-  Contains NaN: False
-  Contains Inf: False
-Frame 15:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.552701473236084
-  Contains NaN: False
-  Contains Inf: False
-Frame 16:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5376280546188354
-  Contains NaN: False
-  Contains Inf: False
-Frame 17:
-  Min value: 0.0
-  Max value: 0.869140625
-  Mean value: 0.5245155692100525
-  Contains NaN: False
-  Contains Inf: False
-Frame 18:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.558885931968689
-  Contains NaN: False
-  Contains Inf: False
-Frame 19:
-  Min value: 0.0
-  Max value: 0.927734375
-  Mean value: 0.5344603061676025
-  Contains NaN: False
-  Contains Inf: False
-Frame 20:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5537364482879639
-  Contains NaN: False
-  Contains Inf: False
-Frame 21:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5515925884246826
-  Contains NaN: False
-  Contains Inf: False
-Frame 22:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5639488101005554
-  Contains NaN: False
-  Contains Inf: False
-Frame 23:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5557827353477478
-  Contains NaN: False
-  Contains Inf: False
-Frame 24:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5613030791282654
-  Contains NaN: False
-  Contains Inf: False
-Frame 25:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5758952498435974
-  Contains NaN: False
-  Contains Inf: False
-Frame 26:
-  Min value: 0.0
-  Max value: 0.9228515625
-  Mean value: 0.551095187664032
-  Contains NaN: False
-  Contains Inf: False
-Frame 27:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5533061027526855
-  Contains NaN: False
-  Contains Inf: False
-Frame 28:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5354539752006531
-  Contains NaN: False
-  Contains Inf: False
-Frame 29:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5510373711585999
-  Contains NaN: False
-  Contains Inf: False
-Frame 30:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.556510865688324
-  Contains NaN: False
-  Contains Inf: False
-Frame 31:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5658767223358154
-  Contains NaN: False
-  Contains Inf: False
-Frame 32:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5629859566688538
-  Contains NaN: False
-  Contains Inf: False
-Frame 33:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5683989524841309
-  Contains NaN: False
-  Contains Inf: False
-Frame 34:
-  Min value: 0.0
-  Max value: 0.94775390625
-  Mean value: 0.5493550300598145
-  Contains NaN: False
-  Contains Inf: False
-Frame 35:
-  Min value: 0.0
-  Max value: 0.9814453125
-  Mean value: 0.5353053212165833
-  Contains NaN: False
-  Contains Inf: False
-Frame 36:
-  Min value: 0.0
-  Max value: 0.96337890625
-  Mean value: 0.5429609417915344
-  Contains NaN: False
-  Contains Inf: False
-Frame 37:
-  Min value: 0.0
-  Max value: 0.998046875
-  Mean value: 0.5511505603790283
-  Contains NaN: False
-  Contains Inf: False
-Frame 38:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5771928429603577
-  Contains NaN: False
-  Contains Inf: False
-Frame 39:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5750726461410522
-  Contains NaN: False
-  Contains Inf: False
-Frame 40:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5733781456947327
-  Contains NaN: False
-  Contains Inf: False
-Frame 41:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5705494284629822
-  Contains NaN: False
-  Contains Inf: False
-Frame 42:
-  Min value: 0.0
-  Max value: 0.9248046875
-  Mean value: 0.5319012999534607
-  Contains NaN: False
-  Contains Inf: False
-Frame 43:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5747190117835999
-  Contains NaN: False
-  Contains Inf: False
-Frame 44:
-  Min value: 0.0
-  Max value: 0.966796875
-  Mean value: 0.5485518574714661
-  Contains NaN: False
-  Contains Inf: False
-Frame 45:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5732473731040955
-  Contains NaN: False
-  Contains Inf: False
-Frame 46:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5797930359840393
-  Contains NaN: False
-  Contains Inf: False
-Frame 47:
-  Min value: 0.0
-  Max value: 0.94970703125
-  Mean value: 0.5678896307945251
-  Contains NaN: False
-  Contains Inf: False
-Frame 48:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5698105692863464
-  Contains NaN: False
-  Contains Inf: False
-Frame 49:
-  Min value: 0.0
-  Max value: 0.88671875
-  Mean value: 0.5316367149353027
-  Contains NaN: False
-  Contains Inf: False
-Frame 50:
-  Min value: 0.0
-  Max value: 0.900390625
-  Mean value: 0.548359215259552
-  Contains NaN: False
-  Contains Inf: False
-Frame 51:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5529114603996277
-  Contains NaN: False
-  Contains Inf: False
-Frame 52:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5710616707801819
-  Contains NaN: False
-  Contains Inf: False
-Frame 53:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.598823070526123
-  Contains NaN: False
-  Contains Inf: False
-Frame 54:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.6037910580635071
-  Contains NaN: False
-  Contains Inf: False
-Frame 55:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5995199680328369
-  Contains NaN: False
-  Contains Inf: False
-Frame 56:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5535627007484436
-  Contains NaN: False
-  Contains Inf: False
-Frame 57:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5838862061500549
-  Contains NaN: False
-  Contains Inf: False
-Frame 58:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5747460126876831
-  Contains NaN: False
-  Contains Inf: False
-Frame 59:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5685523152351379
-  Contains NaN: False
-  Contains Inf: False
-Frame 60:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5865811705589294
-  Contains NaN: False
-  Contains Inf: False
-Frame 61:
-  Min value: 0.0
-  Max value: 0.9248046875
-  Mean value: 0.5546839833259583
-  Contains NaN: False
-  Contains Inf: False
-Frame 62:
-  Min value: 0.0
-  Max value: 0.951171875
-  Mean value: 0.5692877769470215
-  Contains NaN: False
-  Contains Inf: False
-Frame 63:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5646187663078308
-  Contains NaN: False
-  Contains Inf: False
-Frame 64:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5741517543792725
-  Contains NaN: False
-  Contains Inf: False
-Frame 65:
-  Min value: 0.0
-  Max value: 0.994140625
-  Mean value: 0.5536871552467346
-  Contains NaN: False
-  Contains Inf: False
-Frame 66:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5707323551177979
-  Contains NaN: False
-  Contains Inf: False
-Frame 67:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5755574107170105
-  Contains NaN: False
-  Contains Inf: False
-Frame 68:
-  Min value: 0.000244140625
-  Max value: 0.912109375
-  Mean value: 0.5651260018348694
-  Contains NaN: False
-  Contains Inf: False
-Frame 69:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.577455997467041
-  Contains NaN: False
-  Contains Inf: False
-Frame 70:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5657532811164856
-  Contains NaN: False
-  Contains Inf: False
-Frame 71:
-  Min value: 0.0
-  Max value: 0.9814453125
-  Mean value: 0.5603848099708557
-  Contains NaN: False
-  Contains Inf: False
-Frame 72:
-  Min value: 0.0
-  Max value: 0.9716796875
-  Mean value: 0.5486133694648743
-  Contains NaN: False
-  Contains Inf: False
-Frame 73:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5593909621238708
-  Contains NaN: False
-  Contains Inf: False
-Frame 74:
-  Min value: 0.0
-  Max value: 0.9755859375
-  Mean value: 0.5689588189125061
-  Contains NaN: False
-  Contains Inf: False
-Frame 75:
-  Min value: 0.0
-  Max value: 0.9697265625
-  Mean value: 0.5710911750793457
-  Contains NaN: False
-  Contains Inf: False
-Frame 76:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5901807546615601
-  Contains NaN: False
-  Contains Inf: False
-Frame 77:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5569854378700256
-  Contains NaN: False
-  Contains Inf: False
-Frame 78:
-  Min value: 0.0
-  Max value: 0.96484375
-  Mean value: 0.5601946711540222
-  Contains NaN: False
-  Contains Inf: False
-Frame 79:
-  Min value: 0.0
-  Max value: 0.953125
-  Mean value: 0.5424611568450928
-  Contains NaN: False
-  Contains Inf: False
-Frame 80:
-  Min value: 0.015380859375
-  Max value: 0.90625
-  Mean value: 0.5434622168540955
-  Contains NaN: False
-  Contains Inf: False
-Frame 81:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5737050175666809
-  Contains NaN: False
-  Contains Inf: False
-Frame 82:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.6009707450866699
-  Contains NaN: False
-  Contains Inf: False
-Frame 83:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5904970169067383
-  Contains NaN: False
-  Contains Inf: False
-Frame 84:
-  Min value: 0.0
-  Max value: 0.99560546875
-  Mean value: 0.5843318104743958
-  Contains NaN: False
-  Contains Inf: False
-Frame 85:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5828843712806702
-  Contains NaN: False
-  Contains Inf: False
-Frame 86:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5756990313529968
-  Contains NaN: False
-  Contains Inf: False
-Frame 87:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5707654356956482
-  Contains NaN: False
-  Contains Inf: False
-Frame 88:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5822433829307556
-  Contains NaN: False
-  Contains Inf: False
-Frame 89:
-  Min value: 0.0
-  Max value: 1.0
-  Mean value: 0.5850852131843567
-  Contains NaN: False
-  Contains Inf: False
+type of result=<class 'numpy.ndarray'>, shape=(90, 512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)
+ImageEncoder img shape=(512, 512, 3)

@@ -3,7 +3,9 @@ __pycache__/
 *.mp4
 *.pt
 *.pth
+*.png
 U-2-Net-master.zip
 SOD_results/
+frames/
 # 忽略所有 log 檔案
 *.log
