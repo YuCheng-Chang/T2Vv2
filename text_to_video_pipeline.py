@@ -459,10 +459,10 @@ class TextToVideoPipeline(StableDiffusionPipeline):
                         print(f'input_tensor shape before transform:{input_tensor.shape}')
                         input_tensor = self.sod_transform(input_tensor)
                         input_tensor = input_tensor.to(self._device)
-                        print(f'input_tensor shape before sod_model:{input_tensor.shape}')
+                        print(f'input_tensor shape after transform:{input_tensor.shape}')
                         if input_tensor.dim() == 3:
                             input_tensor = input_tensor.unsqueeze(0)  # 添加批次維度
-                        print(f'input_tensor shape after adjustment:{input_tensor.shape}')
+                        print(f'input_tensor shape before sod_model:{input_tensor.shape}')
                         mask = self.sod_model(input_tensor)
                         mask = mask[0]
                         print(f"Mask shape after sod_model: {mask.shape}")
