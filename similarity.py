@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+print("In similarity.py")
 # Load the 1D array from the .npy file
 scores = np.load('scores.npy')
 
