@@ -469,7 +469,7 @@ class TextToVideoPipeline(StableDiffusionPipeline):
                         mask = normPred(mask[:,0,:,:]) 
                         print(f"Mask shape after normPred: {mask.shape}")
                         mask = resizePred(mask,(h,w))
-                        print(f"Mask shape after resizePred: {mask.shape}")
+                        print(f"Mask shape after resizePred: {mask.shape}, mean: {torch.mean(mask)}")
                         
                     # 後處理預測結果
                     mask = (mask > 0.5).float()  # 二值化，閾值可以根據需要調整
