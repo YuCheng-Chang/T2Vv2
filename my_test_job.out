@@ -8,7 +8,8 @@ model name=CompVis/stable-diffusion-v1-4
 Module Text2Video
 Model update
 current device : cuda
-Processing chunk 1 / 13
+Processing chunk 1 / 13, chunk_id = 0, frame_ids = [0, 0, 1, 2, 3, 4, 5, 6]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -80,7 +81,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.03386469930410385
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 2 / 13
+Processing chunk 2 / 13, chunk_id = 7, frame_ids = [0, 7, 8, 9, 10, 11, 12, 13]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -152,7 +154,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.2060939520597458
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 3 / 13
+Processing chunk 3 / 13, chunk_id = 14, frame_ids = [0, 14, 15, 16, 17, 18, 19, 20]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -224,7 +227,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.051618028432130814
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 4 / 13
+Processing chunk 4 / 13, chunk_id = 21, frame_ids = [0, 21, 22, 23, 24, 25, 26, 27]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -296,7 +300,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.06406824290752411
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 5 / 13
+Processing chunk 5 / 13, chunk_id = 28, frame_ids = [0, 28, 29, 30, 31, 32, 33, 34]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -368,7 +373,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.13054248690605164
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 6 / 13
+Processing chunk 6 / 13, chunk_id = 35, frame_ids = [0, 35, 36, 37, 38, 39, 40, 41]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -440,7 +446,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.05820121243596077
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 7 / 13
+Processing chunk 7 / 13, chunk_id = 42, frame_ids = [0, 42, 43, 44, 45, 46, 47, 48]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -512,7 +519,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.3993796110153198
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 8 / 13
+Processing chunk 8 / 13, chunk_id = 49, frame_ids = [0, 49, 50, 51, 52, 53, 54, 55]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -584,7 +592,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.15162570774555206
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 9 / 13
+Processing chunk 9 / 13, chunk_id = 56, frame_ids = [0, 56, 57, 58, 59, 60, 61, 62]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -656,7 +665,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.04774433374404907
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 10 / 13
+Processing chunk 10 / 13, chunk_id = 63, frame_ids = [0, 63, 64, 65, 66, 67, 68, 69]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -728,7 +738,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.05339403450489044
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 11 / 13
+Processing chunk 11 / 13, chunk_id = 70, frame_ids = [0, 70, 71, 72, 73, 74, 75, 76]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -800,7 +811,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.048778340220451355
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 12 / 13
+Processing chunk 12 / 13, chunk_id = 77, frame_ids = [0, 77, 78, 79, 80, 81, 82, 83]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961
@@ -872,7 +884,8 @@ Mask shape after resizePred: torch.Size([64, 64]), mean: 0.03240751475095749
 Mask shape before dilation: torch.Size([1, 1, 64, 64])
 Mask shape after dilation: torch.Size([64, 64])
 Continue DDIM with i = 2, t = 941, latent = torch.Size([8, 4, 64, 64]), device = cuda:0, type = torch.float16
-Processing chunk 13 / 13
+Processing chunk 13 / 13, chunk_id = 84, frame_ids = [0, 84, 85, 86, 87, 88, 89]
+xT shape: torch.Size([1, 4, 1, 64, 64])
 t0 = 881 t1 = 941
 Continue DDIM with i = 0, t = 981, latent = torch.Size([1, 4, 64, 64]), device = cuda:0, type = torch.float16
 latent t1 found at i=1, t = 961

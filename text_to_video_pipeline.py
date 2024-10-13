@@ -339,7 +339,7 @@ class TextToVideoPipeline(StableDiffusionPipeline):
             device,
             generator,
             xT,
-        )
+        )#size: bclhw
         dtype = xT.dtype
 
         # when motion field is not used, augment with random latent codes
@@ -361,7 +361,7 @@ class TextToVideoPipeline(StableDiffusionPipeline):
                 xT = torch.cat([xT, xT_missing], dim=2)
 
         xInit = xT.clone()
-
+        # print(f'xT shape: {xT.shape}')#xT shape: torch.Size([1, 4, 1, 64, 64])
         timesteps_ddpm = [981, 961, 941, 921, 901, 881, 861, 841, 821, 801, 781, 761, 741, 721,
                           701, 681, 661, 641, 621, 601, 581, 561, 541, 521, 501, 481, 461, 441,
                           421, 401, 381, 361, 341, 321, 301, 281, 261, 241, 221, 201, 181, 161,

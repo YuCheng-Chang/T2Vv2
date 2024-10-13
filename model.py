@@ -117,7 +117,7 @@ class Model:
                 ch_end = f if i == len(chunk_ids) - 1 else chunk_ids[i + 1]
                 frame_ids = [0] + list(range(ch_start, ch_end))
                 self.generator.manual_seed(seed)
-                print(f'Processing chunk {i + 1} / {len(chunk_ids)}')
+                print(f'Processing chunk {i + 1} / {len(chunk_ids)}, chunk_id = {chunk_ids[i]}, frame_ids = {frame_ids}')
                 result.append(self.inference_chunk(frame_ids=frame_ids,
                                                    prompt=prompt,
                                                    negative_prompt=negative_prompt,
